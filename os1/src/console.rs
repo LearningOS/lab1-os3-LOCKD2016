@@ -1,3 +1,9 @@
+/*！
+
+本模块实现了 print 和 println 宏。
+
+*/
+
 use crate::sbi::console_putchar;
 use core::fmt::{self, Write};
 
@@ -22,7 +28,6 @@ macro_rules! print {
         $crate::console::print(format_args!($fmt $(, $($arg)+)?));
     }
 }
-
 
 #[macro_export]
 macro_rules! println {
